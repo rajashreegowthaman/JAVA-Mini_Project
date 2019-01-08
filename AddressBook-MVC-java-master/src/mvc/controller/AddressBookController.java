@@ -36,11 +36,6 @@ public class AddressBookController {
         daoimplement = new AddressBookDAOImplementation();
         view =new AddressBookMainGUI("View");  
     }
-     
-    
-     
-    
-     
     public void control(){
         loadPersons();
         actionListener = new ActionListener() {
@@ -83,8 +78,7 @@ public class AddressBookController {
             String name = contactDetailsPanel.getNameField().getText();
             String mobile = contactDetailsPanel.getMobileField().getText();
             String email = contactDetailsPanel.geteMailField().getText();
-            String address;
-                address = contactDetailsPanel.getAddressField().getText();
+            String address = contactDetailsPanel.getAddressField().getText();
             flag = validate();
             if(flag)
             {    
@@ -134,11 +128,7 @@ public class AddressBookController {
              }
               loadPersons();
         }
-     
-   */
-    
-    
-    
+    /*
      /**
      *validates that mobile field and name are not empty
      * @return
@@ -161,6 +151,7 @@ public class AddressBookController {
         dialog.getPanel().setName(detailPanel.getNameField().getText());
         dialog.getPanel().setMobile(detailPanel.getMobileField().getText());
         dialog.getPanel().seteMail(detailPanel.geteMailField().getText());
+         dialog.getPanel().setAddress(detailPanel.getAddressField().getText());
         view.getMainGUIFrame().setVisible(false);
         choiceListener = new ActionListener() {
             @Override
@@ -172,7 +163,7 @@ public class AddressBookController {
                 String name = contactDetailsPanel.getNameField().getText();
                 String mobile = contactDetailsPanel.getMobileField().getText();
                 String email = contactDetailsPanel.geteMailField().getText();
-                String address = contactDetailsPanel.getAddressField().getText();
+                String address=contactDetailsPanel.getAddressField().getText();
                 flag = validate();
                 if(flag)
                 {    

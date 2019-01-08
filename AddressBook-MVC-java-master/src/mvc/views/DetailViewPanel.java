@@ -39,6 +39,11 @@ public class DetailViewPanel extends javax.swing.JPanel {
         return txt_email;
         
     }
+       public javax.swing.JTextField getAddressField()
+    {
+        
+        return txt_address;
+    }
       public void setName(String name)
       {
           txt_name.setText(name);
@@ -50,6 +55,10 @@ public class DetailViewPanel extends javax.swing.JPanel {
         public void seteMail(String email)
       {
           txt_email.setText(email);
+      }
+        public void setAddress(String address)
+      {
+          txt_address.setText(address);
       }
         public JComponent getComponent() 
         {
@@ -108,6 +117,9 @@ public class DetailViewPanel extends javax.swing.JPanel {
         jLabel4.setName(""); // NOI18N
 
         txt_address.setBackground(new java.awt.Color(204, 255, 255));
+        txt_address.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
+        txt_address.setForeground(new java.awt.Color(0, 51, 51));
+        txt_address.setDisabledTextColor(new java.awt.Color(0, 102, 102));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -147,7 +159,7 @@ public class DetailViewPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_address, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -161,11 +173,5 @@ public class DetailViewPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txt_name;
     // End of variables declaration//GEN-END:variables
 
-    public Object getAddressField() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setAddress(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
